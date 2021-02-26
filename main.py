@@ -10,7 +10,3 @@
 
 # TODO: create "program files" that are just configs that load in all the settings for decisions made above
 
-# import geojson
-# with open(path_to_file) as f:
-#     gj = geojson.load(f)
-# features = gj['features'][0]

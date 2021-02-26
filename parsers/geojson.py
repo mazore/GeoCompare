@@ -1,1 +1,4 @@
-# Step 4: go through each feature from the downloaded GEOJSOn and check the "geometry" value (which contains the coordinates) to compare multiple sites
+# import geojson
+# with open(path_to_file) as f:
+#     gj = geojson.load(f)
+# features = gj['features'][0]
