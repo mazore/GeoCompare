@@ -1,0 +1,1 @@
+# Step 4: go through each feature from the downloaded GEOJSOn and check the "geometry" value (which contains the coordinates) to compare multiple sites

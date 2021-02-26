@@ -1,0 +1,5 @@
+# Fetches GeoJSON from a featureServer URL
+
+# Step 2: append ?f=pjson and parse for the `serviceItemId` value. also check `supportedQueryFormats` for `geoJSON`. possibly also save the name and id of this layer and increment the /0 to get more if any
+#Step 3: fetch geoJSON data and store in cache folder (or somewhere, probably not memory). repeat and increment the _0 (layer id) at the end until you get a 400 bad request
+# https://opendata.arcgis.com/datasets/{serviceItemId}_{layerID}.geojson
