@@ -11,3 +11,5 @@ class Source:
 	def fetch(self):
 		raise NotImplementedError()
 
+	def get_fetcher_name(self):
+		return self.fetcher_name
