@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 geojson = "*"
 mkdocs = "*"
+requests = "*"
 
 [dev-packages]
 
