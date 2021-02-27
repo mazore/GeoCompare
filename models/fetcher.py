@@ -2,7 +2,7 @@ class Fetcher:
 	def __init__(self, url, name):
 		self.url = url
 		self.name = name
-		self.useragent = ""
+		self.useragent = "GeoCompare script (https://github.com/VacFind/GeoCompare)"
 
 
 	def auth(self):
