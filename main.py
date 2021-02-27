@@ -10,3 +10,17 @@
 
 # TODO: create "program files" that are just configs that load in all the settings for decisions made above
 
+import json
+from models.config import Config
+from models.source import Source
+# import argparse
+
+
+
+if __name__ == "__main__":
+	configfile = Config('./config.json')
+	config = configfile.get()
+	sources = []
+	for source in config['sources']:
+		sources.append(Source.fromDict(source))
+
