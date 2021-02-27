@@ -1,0 +1,10 @@
+{
+	"sources": [
+		{
+			"name": "giscorps-vaccination-sites",
+			"fetcher": "arcgis",
+			"url": "https://services.arcgis.com/8ZpVMShClf8U8dae/arcgis/rest/services/Covid19_Vaccination_Locations/FeatureServer/0"
+
+		}
+	]
+}
