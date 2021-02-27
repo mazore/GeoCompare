@@ -1,3 +1,4 @@
+import datetime
 import os
 
 class Fetcher:
@@ -10,6 +11,18 @@ class Fetcher:
 			self.cachepath = cachepath
 		else:
 			self.cachepath = os.getcwd() + "/cache"
+
+	def build_headers(self):
+		return { 'User-Agent': self.useragent }
+	
+	def get_cachepath(self):
+		return self.cachepath
+
+	def should_fetch(self):
+		raise NotImplementedError()
+	
+	def get_filename(self, extension="txt"):
+		return self.get_cachepath() + datetime.datetime.now().strftime('%Y-%m-%dT%H%M%S') + "." + extension
 
 	def auth(self):
 		raise NotImplementedError()
