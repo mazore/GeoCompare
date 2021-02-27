@@ -2,7 +2,7 @@ class Source:
 	def __init__(self, name, fetcher_name, url):
 		self.url = url
 		self.name = name
-		self.fetchername = fetcher_name
+		self.fetcher_name = fetcher_name
 
 	@classmethod
 	def fromDict(cls, data):
