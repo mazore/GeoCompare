@@ -13,9 +13,18 @@
 import json
 from models.config import Config
 from models.source import Source
+from fetchers.arcgis import Arcgis
 # import argparse
 
-
+def fetch_source(source):
+	fname = source.get_fetcher_name()
+	fetcher = None
+	if fname == 'arcgis':
+		fetcher = Arcgis(source.url)
+	else:
+		raise ValueError('Bad message type {}'.format(message_type))
+	
+	fetcher.fetch()
 
 if __name__ == "__main__":
 	configfile = Config('./config.json')
