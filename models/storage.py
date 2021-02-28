@@ -3,7 +3,7 @@ import datetime
 from constants import DATE_FORMAT_STRING
 
 class CacheEntry:
-	def __init__(self, location, filename, last_saved=None delimiter="_"):
+	def __init__(self, location, filename, last_saved=None, delimiter="_"):
 		self.location = location
 		self.filename = filename
 		self.delimiter = delimiter
@@ -19,10 +19,9 @@ class CacheEntry:
 			full_name = split_filename[1]
 
 		full_name_split = filename.split("_", 1)
-		last_saved = datetime.datetime.strptime(full_name_split[0], DATE_FORMAT_STRING)
+		cache_date = datetime.datetime.strptime(full_name_split[0], DATE_FORMAT_STRING)
 		real_name = full_name_split[1]
-		data = json.loads(path.read_text())
-		cls(path, real_name, last_saved=last_saved)
+		return cls(path, real_name, last_saved=cache_date)
 
 	def get_date_saved(self):
 		return self.last_saved
