@@ -18,6 +18,9 @@ class Source:
 
 	def get_fetcher_name(self):
 		return self.fetcher_name
+
+	def get_url(self):
+		return self.url
 	
 	def get_id(self):
 		return self.id
