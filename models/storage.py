@@ -3,10 +3,11 @@ import datetime
 from constants import DATE_FORMAT_STRING
 
 class CacheEntry:
-	def __init__(self, location, filename, delimiter="_"):
+	def __init__(self, location, filename, last_saved=None delimiter="_"):
 		self.location = location
 		self.filename = filename
 		self.delimiter = delimiter
+		self.last_saved = last_saved
 
 	def get_file_date(self):
 		datestr = self.filename.split(self.delimiter, 1)[0]
@@ -23,7 +24,9 @@ class CacheEntry:
 			return True
 
 	def write(self, data):
-		writetime = datetime.datetime.now().strftime(DATE_FORMAT_STRING)
-		filepath = self.location.joinpath(writetime + "_" + self.filename)
+		writetime = datetime.datetime.now()
+		formatted_writetime = writetime.strftime(DATE_FORMAT_STRING)
+		filepath = self.location.joinpath(formatted_writetime + "_" + self.filename)
 		filepath.write_text(data)
+		self.last_saved = writetime
 		
