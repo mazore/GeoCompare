@@ -9,6 +9,17 @@ class CacheEntry:
 		self.delimiter = delimiter
 		self.last_saved = last_saved
 
+	@classmethod
+	def from_filename(cls, filename):
+		split_filename = filename.rsplit("/", 1)
+		path = Path(split_filename[0])
+		full_name = split_filename[1]
+		full_name_split = filename.split("_", 1)
+		last_saved = datetime.datetime.strptime(full_name_split[0], DATE_FORMAT_STRING)
+		real_name = full_name_split[1]
+		data = json.loads(path.read_text())
+		cls(path, real_name, last_saved=last_saved)
+
 	def get_date_saved(self):
 		return self.last_saved
 
