@@ -12,8 +12,12 @@ class CacheEntry:
 	@classmethod
 	def from_filename(cls, filename):
 		split_filename = filename.rsplit("/", 1)
-		path = Path(split_filename[0])
-		full_name = split_filename[1]
+		path = Path()
+		full_name = split_filename[0]
+		if len(split_filename) > 1:
+			path = Path(split_filename[0])
+			full_name = split_filename[1]
+
 		full_name_split = filename.split("_", 1)
 		last_saved = datetime.datetime.strptime(full_name_split[0], DATE_FORMAT_STRING)
 		real_name = full_name_split[1]
