@@ -11,7 +11,7 @@ class Config:
 	def from_file(cls, filename):
 		path = Path(filename)
 		data = json.loads(path.read_text())
-		cls.from_dict(data)
+		return cls.from_dict(data)
 
 	@classmethod
 	def from_dict(cls, data):
