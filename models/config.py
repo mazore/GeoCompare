@@ -1,5 +1,6 @@
 import os, json
 from pathlib import Path
+from models.source import Source
 
 class Config:
 	def __init__(self, sources=[]):
@@ -15,7 +16,7 @@ class Config:
 	@classmethod
 	def from_dict(cls, data):
 		sources = []
-		for (source in data["sources"]):
+		for source in data["sources"]:
 			sources.append(Source.fromDict(source))
 		
 		return cls(sources=sources)
