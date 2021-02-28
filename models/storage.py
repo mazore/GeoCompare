@@ -29,4 +29,9 @@ class CacheEntry:
 		filepath = self.location.joinpath(formatted_writetime + "_" + self.filename)
 		filepath.write_text(data)
 		self.last_saved = writetime
+
+	def read(self):
+		formatted_time = self.last_saved.strftime(DATE_FORMAT_STRING)
+		filepath = self.location.joinpath(formatted_time + "_" + self.filename)
+		return filepath.read_text(data)
 		
