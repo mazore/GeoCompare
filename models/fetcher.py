@@ -5,7 +5,7 @@ from constants import USER_AGENT_STRING
 
 
 class Fetcher:
-	def __init__(self, url, name, cachepath=None):
+	def __init__(self, url, name, cachepath="./cache"):
 		self.url = url
 		self.name = name
 		self.useragent = USER_AGENT_STRING
