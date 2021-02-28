@@ -1,12 +1,25 @@
 import os, json
+from pathlib import Path
 
 class Config:
-	def __init__(self, filepath):
-		self.filepath = filepath
+	def __init__(self, sources=[]):
+		self.sources = sources
 
-	def get(self):
-		if os.path.isfile(self.filepath):
-			with open(self.filepath, "r") as config:
-				return json.loads(config.read())
-		else:
-			return None
+
+	@classmethod
+	def from_file(cls, filename):
+		path = Path(filename)
+		data = json.loads(path.read_text())
+		cls.from_dict(data)
+
+	@classmethod
+	def from_dict(cls, data):
+		sources = []
+		for (source in data["sources"]):
+			sources.append(Source.fromDict(source))
+		
+		return cls(sources=sources)
+
+
+	def get_sources(self):
+		return self.sources
