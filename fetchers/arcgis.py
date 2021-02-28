@@ -8,6 +8,7 @@
 # it might be better to turn this into a simple file-fetcher since these are just json files and need no special sauce to access
 
 from models.fetcher import Fetcher
+from models.storage import CacheEntry
 import requests
 import json
 
@@ -47,6 +48,18 @@ class Arcgis(Fetcher):
 				print("HTTP error while requesting " + url)
 
 		self.serviceItemId = data['serviceItemId']
+
+	def fetch_geojson(self, layerID):
+		if not self.serviceItemId:
+			raise ValueError("serviceItemID must be set in order to fetch geojson. Please call `get_info` first")
+		
+		url = self.generate_geojson_url()
+		filename = url.split("/")[-1]
+		cache_location = CacheEntry(self.cachepath, filename)
+		response = requests.get(url, headers=self.build_headers())
+
+		if response.status_code == 200:
+			cache_location.write(response.content)
 
 	def generate_geojson_url(self, layerID=0):
 		url = "https://opendata.arcgis.com/datasets/{serviceItemId}_{layerID}.geojson"
