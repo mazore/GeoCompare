@@ -7,12 +7,12 @@
 
 # it might be better to turn this into a simple file-fetcher since these are just json files and need no special sauce to access
 
-import models.fetcher
+from models.fetcher import Fetcher
 import requests
 
 class Arcgis(Fetcher):
 	def __init__(self, url):
-		super(url, "arcgis")
+		super().__init__(url, "arcgis")
 
 	def auth(self):
 		pass
