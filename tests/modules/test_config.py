@@ -1,5 +1,6 @@
 import unittest
 from models.config import Config
+from models.source import Source
 from unittest.mock import patch, mock_open
 
 
@@ -9,29 +10,24 @@ class TestConfigMethods(unittest.TestCase):
 	testconfigFile = """{
 		"sources": [
 			{
-				"name": "giscorps-vaccination-sites",
-				"fetcher": "arcgis",
-				"url": "https://services.arcgis.com/8ZpVMShClf8U8dae/arcgis/rest/services/Covid19_Vaccination_Locations/FeatureServer/0"
-
+				"name": "name",
+				"fetcher": "fetcher",
+				"url": "url"
 			}
 		]
 	}"""
 
-	def test_init(self):
-		inited = Config("./some_file")
-		self.assertEqual(inited.filepath, "./some_file")
+	def test_get_sources(self):
+		srcs = [Source("name", "fetcher", "url")]
+		inited = Config(sources=srcs)
+		self.assertEqual(inited.get_sources(), srcs)
 
-	# https://stackoverflow.com/a/34677735
-	@patch("builtins.open", new_callable=mock_open, read_data=testconfigFile)
-	@patch("os.path")
-	def test_get(self, mock_path, mock_file):
-		# set up the mock
-		mock_path.isfile.return_value = True
-		inited = Config("./some_file")
-		config = inited.get()
-		mock_file.assert_called_with("./some_file", "r")
-		mock_path.isfile.assert_called_with("./some_file")
-		# TODO: assertions about contents of config
+
+	def test_from_dict(self):
+		test_dict = json.parse(TestConfigMethods.testconfigFile)
+		conf = Config.from_dict(test_dict)
+		self.assertEqual(len(conf.get_sources()), 1)
+		self.assertEqual(conf.get_sources()[0].get_fetcher_name(), "fetcher")
 
 if __name__ == '__main__':
 	unittest.main()
