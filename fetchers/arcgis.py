@@ -16,7 +16,7 @@ class Arcgis(Fetcher):
 	def __init__(self, url):
 		super().__init__(url, "arcgis")
 		# designate a folder inside the cache for this fetchers files
-		self.cachepath.joinpath(self.name)
+		self.cachepath = self.cachepath.joinpath(self.name)
 
 	def build_headers(self):
 		return super().build_headers().update({})
@@ -31,7 +31,7 @@ class Arcgis(Fetcher):
    				json.dump(response, outfile)
 
 	def get_info(self, force_fetch=False):
-		schema_filename = self.cachepath.name("schema.json")
+		schema_filename = self.cachepath.joinpath("schema.json")
 		url = self.url + "?f=pjson"
 
 		if schema_filename.exists() and not force_fetch:
