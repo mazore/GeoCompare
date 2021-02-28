@@ -20,11 +20,11 @@ def fetch_source(source):
 	fname = source.get_fetcher_name()
 	fetcher = None
 	if fname == 'arcgis':
-		fetcher = Arcgis(source.url)
+		fetcher = Arcgis()
 	else:
 		raise ValueError('Bad message type {}'.format(message_type))
 	
-	fetcher.fetch()
+	fetcher.fetch(source)
 
 if __name__ == "__main__":
 	configfile = Config.from_file('./config.json')
