@@ -16,6 +16,9 @@ class Arcgis(Fetcher):
 		# designate a folder inside the cache for this fetchers files
 		self.cachepath.joinpath(self.name)
 
+	def build_headers(self):
+		return super().build_headers().update({})
+
 	def auth(self):
 		pass
 
