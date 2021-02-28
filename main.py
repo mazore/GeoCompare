@@ -27,8 +27,7 @@ def fetch_source(source):
 	fetcher.fetch()
 
 if __name__ == "__main__":
-	configfile = Config('./config.json')
-	config = configfile.get()
-	for source in config['sources']:
-		fetch_source(Source.fromDict(source))
+	configfile = Config.from_file('./config.json')
+	for source in configfile.get_sources():
+		fetch_source(source)
 
