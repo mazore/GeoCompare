@@ -3,12 +3,13 @@ import datetime
 from constants import DATE_FORMAT_STRING
 
 class CacheEntry:
-	def __init__(self, location, filename):
+	def __init__(self, location, filename, delimiter="_"):
 		self.location = location
 		self.filename = filename
+		self.delimiter = delimiter
 
 	def get_file_date(self):
-		datestr = self.filename.split("_", 1)[0]
+		datestr = self.filename.split(self.delimiter, 1)[0]
 		return datetime.datetime.strptime(datestr, DATE_FORMAT_STRING)
 
 	def get_age_since_datetime(self, datetime=datetime.datetime.now()):
