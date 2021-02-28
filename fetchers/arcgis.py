@@ -9,6 +9,7 @@
 
 from models.fetcher import Fetcher
 import requests
+import json
 
 class Arcgis(Fetcher):
 	def __init__(self, url):
