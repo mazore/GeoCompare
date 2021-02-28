@@ -1,0 +1,1 @@
+USER_AGENT_STRING = "GeoCompare script (https://github.com/VacFind/GeoCompare)"

@@ -1,13 +1,14 @@
 import datetime
 import os
 from pathlib import Path
+from constants import USER_AGENT_STRING
 
 
 class Fetcher:
 	def __init__(self, url, name, cachepath=None):
 		self.url = url
 		self.name = name
-		self.useragent = "GeoCompare script (https://github.com/VacFind/GeoCompare)"
+		self.useragent = USER_AGENT_STRING
 		self.cachepath = Path(cachepath)
 
 	def build_headers(self):
