@@ -27,3 +27,22 @@ class Arcgis(Fetcher):
 		if response.status_code == 200:
 			with open('response.txt', 'w') as outfile:
    				json.dump(response, outfile)
+
+	def get_info(self, force_fetch=False):
+		schema_filename = self.cachepath.name("schema.json")
+		url = self.url + "?f=pjson"
+
+		if schema_filename.exists() and not force_fetch:
+			data = json.loads(schema_filename.read_text())
+		else:
+			try:
+				response = requests.get(url, headers=self.build_headers())	
+				# print(vars(response))
+				if response.status_code == 200:
+					# print(response.content)
+					schema_filename.write_text(response.content.decode())
+					data = json.loads(response.content.decode())
+			except requests.HTTPError as e:
+				print("HTTP error while requesting " + url)
+
+		self.serviceItemId = data['serviceItemId']
