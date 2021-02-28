@@ -46,3 +46,7 @@ class Arcgis(Fetcher):
 				print("HTTP error while requesting " + url)
 
 		self.serviceItemId = data['serviceItemId']
+
+	def generate_geojson_url(self, layerID):
+		url = "https://opendata.arcgis.com/datasets/{serviceItemId}_{layerID}.geojson"
+		return url.format(serviceItemID=self.serviceItemId, layerID=layerID)
