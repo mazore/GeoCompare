@@ -13,6 +13,8 @@ import requests
 class Arcgis(Fetcher):
 	def __init__(self, url):
 		super().__init__(url, "arcgis")
+		# designate a folder inside the cache for this fetchers files
+		self.cachepath.joinpath(self.name)
 
 	def auth(self):
 		pass
