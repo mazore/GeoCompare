@@ -48,3 +48,5 @@ class CacheEntry:
 		filepath = self.get_full_path()
 		return filepath.read_text(data)
 		
+	def delete(self):
+		self.get_full_path().unlink()
