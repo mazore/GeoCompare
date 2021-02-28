@@ -9,12 +9,11 @@ class CacheEntry:
 		self.delimiter = delimiter
 		self.last_saved = last_saved
 
-	def get_file_date(self):
-		datestr = self.filename.split(self.delimiter, 1)[0]
-		return datetime.datetime.strptime(datestr, DATE_FORMAT_STRING)
+	def get_date_saved(self):
+		return self.last_saved
 
-	def get_age_since_datetime(self, datetime=datetime.datetime.now()):
-		return datetime - self.get_file_date()
+	def get_age_at_datetime(self, datetime=datetime.datetime.now()):
+		return datetime - self.last_saved
 
 	def is_older_than(self, datetime):
 		cache = self.get_age_since_datetime(datetime=datetime).total_seconds()
