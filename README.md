@@ -8,3 +8,8 @@ This is useful for things like combining state-level vaccination site data into 
 ## Documentation
 
 Documentation is hosted on [Github Pages](https://vacfind.github.io/GeoCompare) and built using [MkDocs](https://www.mkdocs.org/)
+
+
+## Tests
+
+to run unit tests, use the command `python3 -m unittest tests/**/*.py`
