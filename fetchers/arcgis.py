@@ -13,8 +13,8 @@ import requests
 import json
 
 class Arcgis(Fetcher):
-	def __init__(self, url):
-		super().__init__(url, "arcgis")
+	def __init__(self):
+		super().__init__("arcgis")
 		# designate a folder inside the cache for this fetchers files
 		self.cachepath = self.cachepath.joinpath(self.name)
 
@@ -24,15 +24,15 @@ class Arcgis(Fetcher):
 	def auth(self):
 		pass
 
-	def fetch(self):
+	def fetch(self, source):
 		response = requests.get(self.url)
 		if response.status_code == 200:
 			with open('response.txt', 'w') as outfile:
    				json.dump(response, outfile)
 
-	def get_info(self, force_fetch=False):
+	def get_info(self, url, force_fetch=False):
 		schema_filename = self.cachepath.joinpath("schema.json")
-		url = self.url + "?f=pjson"
+		url = url + "?f=pjson"
 
 		if schema_filename.exists() and not force_fetch:
 			data = json.loads(schema_filename.read_text())
@@ -47,7 +47,7 @@ class Arcgis(Fetcher):
 			except requests.HTTPError as e:
 				print("HTTP error while requesting " + url)
 
-		self.serviceItemId = data['serviceItemId']
+		return data
 
 	def fetch_geojson(self, layerID):
 		if not self.serviceItemId:

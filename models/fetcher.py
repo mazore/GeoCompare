@@ -5,8 +5,7 @@ from constants import USER_AGENT_STRING
 
 
 class Fetcher:
-	def __init__(self, url, name, cachepath="./cache"):
-		self.url = url
+	def __init__(self, name, cachepath="./cache"):
 		self.name = name
 		self.useragent = USER_AGENT_STRING
 		self.cachepath = Path(cachepath)
@@ -23,5 +22,5 @@ class Fetcher:
 	def auth(self):
 		raise NotImplementedError()
 
-	def fetch(self):
+	def fetch(self, source):
 		raise NotImplementedError()
