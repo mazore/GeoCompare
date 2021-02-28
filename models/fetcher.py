@@ -1,7 +1,7 @@
 import datetime
 import os
 from pathlib import Path
-from constants import USER_AGENT_STRING
+from constants import USER_AGENT_STRING, DATE_FORMAT_STRING
 
 
 class Fetcher:
@@ -21,7 +21,7 @@ class Fetcher:
 		raise NotImplementedError()
 	
 	def get_filename(self, extension="txt"):
-		return self.get_cachepath() + datetime.datetime.now().strftime('%Y-%m-%dT%H%M%S') + "." + extension
+		return self.get_cachepath() + datetime.datetime.now().strftime(DATE_FORMAT_STRING) + "." + extension
 
 	def auth(self):
 		raise NotImplementedError()
