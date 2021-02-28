@@ -2,7 +2,7 @@ import unittest
 from models.config import Config
 from models.source import Source
 from unittest.mock import patch, mock_open
-
+import json
 
 
 class TestConfigMethods(unittest.TestCase):
@@ -24,7 +24,7 @@ class TestConfigMethods(unittest.TestCase):
 
 
 	def test_from_dict(self):
-		test_dict = json.parse(TestConfigMethods.testconfigFile)
+		test_dict = json.loads(TestConfigMethods.testconfigFile)
 		conf = Config.from_dict(test_dict)
 		self.assertEqual(len(conf.get_sources()), 1)
 		self.assertEqual(conf.get_sources()[0].get_fetcher_name(), "fetcher")
