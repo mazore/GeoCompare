@@ -51,9 +51,7 @@ class CacheEntry:
 		self.last_saved = writetime
 
 	def read(self):
-		formatted_time = self.last_saved.strftime(DATE_FORMAT_STRING)
-		filepath = self.get_full_path()
-		return filepath.read_text(data)
+		return self.get_full_path().read_text(data)
 		
 	def delete(self):
 		self.get_full_path().unlink()
