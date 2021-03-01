@@ -45,8 +45,7 @@ class CacheEntry:
 
 	def write(self, data):
 		writetime = datetime.datetime.now()
-		formatted_writetime = writetime.strftime(DATE_FORMAT_STRING)
-		filepath = self.get_full_path()
+		filepath = self.get_full_path_for_datetime(writetime)
 		filepath.write_text(data)
 		self.last_saved = writetime
 
