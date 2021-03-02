@@ -25,10 +25,12 @@ class Arcgis(Fetcher):
 		pass
 
 	def fetch(self, source):
-		response = requests.get(self.url)
-		if response.status_code == 200:
-			with open('response.txt', 'w') as outfile:
-   				json.dump(response, outfile)
+		url = source.get_url()
+		data = self.get_info(url)
+
+
+		for layer in data["layers"]:
+			self.fetch_geojson(data["serviceItemID"], layer["id"])
 
 	def get_info(self, url, force_fetch=False):
 		schema_location = CacheEntry(self.cachepath, "schema.json")
