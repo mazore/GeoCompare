@@ -34,8 +34,13 @@ class Googledrive(Fetcher):
 		pass
 
 	def fetch(self, source):
-		url = self.generate_drive_csv_url(source.get_url())
-		pass
+		sheets = source.get_parameter("sheets")
+
+		if sheets:
+			for sheet in sheets:
+				self.fetch_as_csv(source.get_url(), source.get_name(), sheet=sheet)
+		else:
+			self.fetch_as_csv(source.get_url(), source.get_name())
 
 	def fetch_as_csv(self, url, filetitle, sheet=None, force_fetch=None):
 		filename = self.generate_cachefile_name(filetitle, sheet=sheet)
