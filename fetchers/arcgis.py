@@ -33,21 +33,14 @@ class Arcgis(Fetcher):
 			self.fetch_geojson(data["serviceItemID"], layer["id"])
 
 	def get_info(self, url, force_fetch=False):
-		schema_location = CacheEntry(self.cachepath, "schema.json")
 		url = url + "?f=pjson"
-
-		if schema_location.exists() and not force_fetch:
-			data = json.loads(schema_location.read())
-		else:
-			try:
-				response = requests.get(url, headers=self.build_headers())	
-				# print(vars(response))
-				if response.status_code == 200:
-					result = response.content.decode()
-					schema_location.write(result)
-					data = json.loads(result)
-			except requests.HTTPError as e:
-				print("HTTP error while requesting " + url)
+		try:
+			response = requests.get(url, headers=self.build_headers())	
+			# print(vars(response))
+			if response.status_code == 200:
+				data = json.loads(response.content.decode())
+		except requests.HTTPError as e:
+			print("HTTP error while requesting " + url)
 
 		return data
 
