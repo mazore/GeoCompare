@@ -41,9 +41,9 @@ class Arcgis(Fetcher):
 				response = requests.get(url, headers=self.build_headers())	
 				# print(vars(response))
 				if response.status_code == 200:
-					# print(response.content)
-					schema_filename.write_text(response.content.decode())
-					data = json.loads(response.content.decode())
+					result = response.content.decode()
+					schema_location.write(result)
+					data = json.loads(result)
 			except requests.HTTPError as e:
 				print("HTTP error while requesting " + url)
 
