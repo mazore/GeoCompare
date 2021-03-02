@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "420ac5abcba27be40ce3f9241d9819b3683a55480089fb1ca1aa947a7fd293de"
+            "sha256": "ba972f141087be9717a0100eab85fe1806e2a3d8674228e20f9049f07d39d1c0"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -47,12 +47,27 @@
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
             "version": "==7.1.2"
         },
+        "docutils": {
+            "hashes": [
+                "sha256:0c5b78adfbf7762415433f5515cd5c9e762339e23369dbe8000d84a4bf4ab3af",
+                "sha256:c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc"
+            ],
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
+            "version": "==0.16"
+        },
         "future": {
             "hashes": [
                 "sha256:b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"
             ],
             "markers": "python_version >= '2.6' and python_version not in '3.0, 3.1, 3.2, 3.3'",
             "version": "==0.18.2"
+        },
+        "geohash2": {
+            "hashes": [
+                "sha256:0ed0583b1f4fc329f96d807c9a4cd895c7eed2c35479ac7b4a50725249997bda"
+            ],
+            "index": "pypi",
+            "version": "==1.1"
         },
         "geojson": {
             "hashes": [

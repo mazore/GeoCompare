@@ -8,6 +8,7 @@ geojson = "*"
 mkdocs = "*"
 requests = "*"
 argparse = "*"
+geohash2 = "*"
 
 [dev-packages]
 
