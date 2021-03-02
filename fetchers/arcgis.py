@@ -30,7 +30,7 @@ class Arcgis(Fetcher):
 
 
 		for layer in data["layers"]:
-			self.fetch_geojson(data["serviceItemID"], layer["id"])
+			self.fetch_geojson(data["serviceItemId"], layer["id"])
 
 	def get_info(self, url, force_fetch=False):
 		url = url + "?f=pjson"
@@ -54,5 +54,5 @@ class Arcgis(Fetcher):
 			cache_location.write(response.content.decode())
 
 	def generate_geojson_url(self, serviceItemID, layerID=0):
-		url = "https://opendata.arcgis.com/datasets/{serviceItemId}_{layerID}.geojson"
+		url = "https://opendata.arcgis.com/datasets/{serviceItemID}_{layerID}.geojson"
 		return url.format(serviceItemID=serviceItemID, layerID=layerID)
