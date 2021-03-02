@@ -51,7 +51,7 @@ class Arcgis(Fetcher):
 		response = requests.get(url, headers=self.build_headers())
 
 		if response.status_code == 200:
-			cache_location.write(response.content)
+			cache_location.write(response.content.decode())
 
 	def generate_geojson_url(self, serviceItemID, layerID=0):
 		url = "https://opendata.arcgis.com/datasets/{serviceItemId}_{layerID}.geojson"
