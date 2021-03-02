@@ -9,6 +9,7 @@
 
 from models.fetcher import Fetcher
 from models.storage import CacheEntry
+from helpers import make_cached_request
 import requests
 import json
 
@@ -47,16 +48,7 @@ class Arcgis(Fetcher):
 	def fetch_geojson(self, serviceItemID, layerID, force_fetch=False):	
 		url = self.generate_geojson_url(serviceItemID, layerID=layerID)
 		filename = url.split("/")[-1]
-		cache_location = CacheEntry(self.cachepath, filename)
-		if cache_location.exists() and not force_fetch:
-			data = json.loads(cache_location.read())
-		else:
-			response = requests.get(url, headers=self.build_headers())
-
-			if response.status_code == 200:
-				data = response.content.decode()
-				cache_location.write(data)
-		return data
+		return make_cached_request(self.cachepath, url, filename, self.build_headers(), force_fetch=force_fetch)
 
 	def generate_geojson_url(self, serviceItemID, layerID=0):
 		url = "https://opendata.arcgis.com/datasets/{serviceItemID}_{layerID}.geojson"
