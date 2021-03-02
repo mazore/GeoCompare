@@ -14,6 +14,7 @@ import json
 from models.config import Config
 from models.source import Source
 from fetchers.arcgis import Arcgis
+from fetchers.googledrive import Googledrive
 # import argparse
 
 def fetch_source(source):
@@ -21,6 +22,8 @@ def fetch_source(source):
 	fetcher = None
 	if fname == 'arcgis':
 		fetcher = Arcgis()
+	elif fname == 'googledrive':
+		fetcher = Googledrive()
 	else:
 		raise ValueError('Bad message type {}'.format(message_type))
 	
