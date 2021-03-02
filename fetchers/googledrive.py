@@ -33,8 +33,7 @@ class Googledrive(Fetcher):
 		pass
 
 	def fetch(self, source):
-		url = source.get_url()
-		"" + "/gviz/tq?tqx=out:csv" + "&sheet=CO"
+		url = self.generate_drive_url(source.get_url(),
 		pass
 
 	def generate_drive_url(self, url, sheet=None):
