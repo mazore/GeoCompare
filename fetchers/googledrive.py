@@ -49,7 +49,7 @@ class Googledrive(Fetcher):
 
 	def generate_cachefile_name(self, name, sheet=None):
 		if sheet:
-			return name += "-" + sheet
+			name += "-" + sheet
 		
 		name += ".csv"
 		return name
