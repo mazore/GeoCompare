@@ -36,6 +36,13 @@ class Googledrive(Fetcher):
 		url = self.generate_drive_csv_url(source.get_url())
 		pass
 
+	def generate_cachefile_name(self, name, sheet=None):
+		if sheet:
+			return name += "-" + sheet
+		
+		name += ".csv"
+		return name
+
 	def generate_drive_csv_url(self, url, sheet=None):
 		finalurl = url + "/gviz/tq?tqx=out:csv"
 		if sheet:
