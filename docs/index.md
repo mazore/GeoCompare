@@ -2,6 +2,8 @@
 
 GeoCompare is intended to be modular in order to a accomodate multiple different formats (both for input and output) of geographic data
 
+![Diagram of GeoCompare Architecture](img/GeoCompare-architecture.png)
+
 ## Fetchers
 Fetchers save data from sources like API's to a local cache for processing
 
