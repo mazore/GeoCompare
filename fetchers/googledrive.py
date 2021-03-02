@@ -36,3 +36,9 @@ class Googledrive(Fetcher):
 		url = source.get_url()
 		"" + "/gviz/tq?tqx=out:csv" + "&sheet=CO"
 		pass
+
+	def generate_drive_url(self, url, sheet=None):
+		finalurl = url + "/gviz/tq?tqx=out:csv"
+		if sheet:
+			finalurl += "&sheet={sheet}".format(sheet=sheet)
+		return finalurl
