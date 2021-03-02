@@ -31,7 +31,7 @@ class CacheEntry:
 		return self.location.joinpath(formatted_time + "_" + self.filename)
 
 	def get_full_path(self):
-		return get_full_path_for_datetime(self.last_saved)
+		return self.get_full_path_for_datetime(self.last_saved)
 
 	def get_age_at_datetime(self, datetime=datetime.datetime.now()):
 		return datetime - self.last_saved
