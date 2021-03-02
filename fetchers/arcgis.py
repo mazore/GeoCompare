@@ -49,11 +49,8 @@ class Arcgis(Fetcher):
 
 		return data
 
-	def fetch_geojson(self, layerID):
-		if not self.serviceItemId:
-			raise ValueError("serviceItemID must be set in order to fetch geojson. Please call `get_info` first")
-		
-		url = self.generate_geojson_url()
+	def fetch_geojson(self, serviceItemID, layerID):	
+		url = self.generate_geojson_url(serviceItemID, layerID=layerID)
 		filename = url.split("/")[-1]
 		cache_location = CacheEntry(self.cachepath, filename)
 		response = requests.get(url, headers=self.build_headers())
@@ -61,6 +58,6 @@ class Arcgis(Fetcher):
 		if response.status_code == 200:
 			cache_location.write(response.content)
 
-	def generate_geojson_url(self, layerID=0):
+	def generate_geojson_url(self, serviceItemID, layerID=0):
 		url = "https://opendata.arcgis.com/datasets/{serviceItemId}_{layerID}.geojson"
-		return url.format(serviceItemID=self.serviceItemId, layerID=layerID)
+		return url.format(serviceItemID=serviceItemID, layerID=layerID)
