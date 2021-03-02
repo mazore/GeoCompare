@@ -33,6 +33,12 @@ class CacheEntry:
 	def get_full_path(self):
 		return self.get_full_path_for_datetime(self.last_saved)
 
+	def exists(self):
+		if not self.last_saved:
+			return False
+		else:
+			return self.get_full_path().exists()
+
 	def get_age_at_datetime(self, datetime=datetime.datetime.now()):
 		return datetime - self.last_saved
 
