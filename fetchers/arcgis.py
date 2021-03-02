@@ -31,11 +31,11 @@ class Arcgis(Fetcher):
    				json.dump(response, outfile)
 
 	def get_info(self, url, force_fetch=False):
-		schema_filename = self.cachepath.joinpath("schema.json")
+		schema_location = CacheEntry(self.cachepath, "schema.json")
 		url = url + "?f=pjson"
 
-		if schema_filename.exists() and not force_fetch:
-			data = json.loads(schema_filename.read_text())
+		if schema_location.exists() and not force_fetch:
+			data = json.loads(schema_location.read())
 		else:
 			try:
 				response = requests.get(url, headers=self.build_headers())	
