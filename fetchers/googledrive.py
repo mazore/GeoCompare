@@ -33,10 +33,10 @@ class Googledrive(Fetcher):
 		pass
 
 	def fetch(self, source):
-		url = self.generate_drive_url(source.get_url(),
+		url = self.generate_drive_csv_url(source.get_url())
 		pass
 
-	def generate_drive_url(self, url, sheet=None):
+	def generate_drive_csv_url(self, url, sheet=None):
 		finalurl = url + "/gviz/tq?tqx=out:csv"
 		if sheet:
 			finalurl += "&sheet={sheet}".format(sheet=sheet)
