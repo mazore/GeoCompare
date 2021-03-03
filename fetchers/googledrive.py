@@ -18,7 +18,7 @@
 
 from models.fetcher import Fetcher
 from models.storage import CacheEntry
-from helpers import make_cached_request
+from helpers import fetch_unless_cache
 import requests
 
 class Googledrive(Fetcher):
@@ -45,7 +45,7 @@ class Googledrive(Fetcher):
 	def fetch_as_csv(self, url, filetitle, sheet=None, force_fetch=None):
 		filename = self.generate_cachefile_name(filetitle, sheet=sheet)
 		url = self.generate_drive_csv_url(url, sheet=sheet)	
-		return make_cached_request(self.cachepath, url, filename, self.build_headers(), force_fetch=force_fetch)
+		fetch_unless_cache(self.cachepath, url, filename, self.build_headers(), force_fetch=force_fetch)
 
 	def generate_cachefile_name(self, name, sheet=None):
 		if sheet:
