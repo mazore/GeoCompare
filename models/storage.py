@@ -32,7 +32,10 @@ class CacheEntry:
 		
 		cachefiles.sort(key=lambda r: r.get_date_saved(), reverse=True)
 		
-		return cachefiles[0]
+		if len(cachefiles) >= 1:
+			return cachefiles[0]
+		else:
+			return None
 
 	def get_date_saved(self):
 		return self.last_saved
