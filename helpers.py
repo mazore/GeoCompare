@@ -11,12 +11,8 @@ def make_cached_request(cachepath, url, filename, headers, force_fetch=False):
 	if not cache_location:
 		cache_location = CacheEntry(cachepath, filename)
 
-	if cache_location.exists() and not force_fetch:
-		data = json.loads(cache_location.read())
-	else:
+	if not cache_location.exists() or force_fetch:
 		response = requests.get(url, headers=headers)
 
 		if response.status_code == 200:
-			data = response.content.decode()
-			cache_location.write(data, raw=True)
-	return data
+			cache_location.write(response.content, raw=True)
