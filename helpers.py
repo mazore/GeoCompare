@@ -6,7 +6,7 @@ def get_distance(x1, y1, x2, y2):
 	return sqrt((y2-y1)^2+(x2-x1)^2)
 
 def make_cached_request(cachepath, url, filename, headers, force_fetch=False):
-	cache_location = CacheEntry(cachepath, filename)
+	cache_location = CacheEntry.latest_from_directory(cachepath)
 	if cache_location.exists() and not force_fetch:
 		data = json.loads(cache_location.read())
 	else:
