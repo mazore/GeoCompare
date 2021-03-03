@@ -1,4 +1,7 @@
 class Parser:
+	def __init__(self, data):
+		self.data = data
+
 	@classmethod
 	def get_location(self, data, key):
 		raise NotImplementedError()

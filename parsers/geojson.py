@@ -4,10 +4,8 @@ import geojson
 from models.parser import Parser
 
 class Geojson(Parser):
-
-	@classmethod
-	def parse(self, string):
-		return geojson.loads(string)
+	def __init__(self, data):
+		super().__init__(geojson.loads(data))
 
 	@classmethod
 	def get_location(self, data, key):
