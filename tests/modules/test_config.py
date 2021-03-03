@@ -1,7 +1,6 @@
 import unittest
 from models.config import Config
 from models.source import Source
-from unittest.mock import patch, mock_open
 import json
 
 
