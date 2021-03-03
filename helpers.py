@@ -1,6 +1,5 @@
 from models.storage import CacheEntry
 import requests
-import json
 
 # Since a geohash (in this implementation) is based on coordinates of longitude and latitude the distance between two geohashes reflects the distance in latitude/longitude coordinates between two points, which does not translate to actual distance, see Haversine formula. 
 # https://en.wikipedia.org/wiki/Haversine_formula
