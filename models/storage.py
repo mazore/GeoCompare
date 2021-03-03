@@ -60,18 +60,24 @@ class CacheEntry:
 		else:
 			return True
 
-	def write(self, data, clear_previous=False):
+	def write(self, data, clear_previous=False, raw=False):
 		writetime = datetime.datetime.now()
 		filepath = self.get_full_path_for_datetime(writetime)
-		filepath.write_text(data)
+		if raw:
+			filepath.write_bytes(data)
+		else:
+			filepath.write_text(data)
 		if clear_previous:
 			oldpath = self.get_full_path()
 			oldpath.unlink()
 		
 		self.last_saved = writetime
 
-	def read(self):
-		return self.get_full_path().read_text()
+	def read(self, raw=False):
+		if raw:
+			return self.get_full_path().read_bytes()
+		else:
+			return self.get_full_path().read_text()
 		
 	def delete(self):
 		self.get_full_path().unlink()
