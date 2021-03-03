@@ -23,6 +23,17 @@ class CacheEntry:
 		real_name = full_name_split[1]
 		return cls(path, real_name, last_saved=cache_date)
 
+	@classmethod
+	def latest_from_directory(cls, dirpath, pattern="*"):
+		cachefiles = []
+		for file in dirpath.glob(pattern):
+			this_entry = cls.from_filename(file)
+			cachefiles.append(this_entry)
+		
+		cachefiles.sort(key=lambda r: r.get_date_saved(), reverse=True)
+		
+		return cachefiles[0]
+
 	def get_date_saved(self):
 		return self.last_saved
 	
