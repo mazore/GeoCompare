@@ -18,5 +18,5 @@ def make_cached_request(cachepath, url, filename, headers, force_fetch=False):
 
 		if response.status_code == 200:
 			data = response.content.decode()
-			cache_location.write(data)
+			cache_location.write(data, raw=True)
 	return data
