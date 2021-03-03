@@ -3,9 +3,10 @@ import datetime
 from constants import DATE_FORMAT_STRING
 
 class CacheEntry:
-	def __init__(self, location, filename, last_saved=None, delimiter="_"):
+	def __init__(self, location, filename, last_saved=None, delimiter="_", mkdir=True):
 		self.location = location
-		self.location.mkdir(parents=True, exist_ok=True)
+		if mkdir:
+			self.location.mkdir(parents=True, exist_ok=True)
 		self.filename = filename
 		self.delimiter = delimiter
 		self.last_saved = last_saved
