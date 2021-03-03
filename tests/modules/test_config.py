@@ -9,6 +9,7 @@ class TestConfigMethods(unittest.TestCase):
 	testconfigFile = """{
 		"sources": [
 			{
+				"id": "id",
 				"name": "name",
 				"fetcher": "fetcher",
 				"url": "url"
@@ -17,7 +18,7 @@ class TestConfigMethods(unittest.TestCase):
 	}"""
 
 	def test_get_sources(self):
-		srcs = [Source("name", "fetcher", "url")]
+		srcs = [Source("id", "name", "fetcher", "url")]
 		inited = Config(sources=srcs)
 		self.assertEqual(inited.get_sources(), srcs)
 
