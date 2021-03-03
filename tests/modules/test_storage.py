@@ -15,6 +15,11 @@ class TestStorageMethods(unittest.TestCase):
 		self.assertEqual(cacheentry.get_date_saved().time(), datetime.datetime(year=2020, month=2, day=2, hour=2, minute=2, second=2).time())
 		self.assertEqual(cacheentry.filename, "myfile.txt")
 
+	def test_make_cache_entry_from_nonexistent_filename(self):
+		filename = "2020-02-02T020202_myfile.txt" 
+		with self.assertRaises(ValueError) as context:
+			cacheentry = CacheEntry.from_filename(filename)
+		
 
 if __name__ == '__main__':
 	unittest.main()
