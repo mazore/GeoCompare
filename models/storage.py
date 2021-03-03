@@ -60,7 +60,7 @@ class CacheEntry:
 		self.last_saved = writetime
 
 	def read(self):
-		return self.get_full_path().read_text(data)
+		return self.get_full_path().read_text()
 		
 	def delete(self):
 		self.get_full_path().unlink()
