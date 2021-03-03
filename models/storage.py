@@ -10,15 +10,15 @@ class CacheEntry:
 		self.last_saved = last_saved
 
 	@classmethod
-	def from_filename(cls, filename):
-		split_filename = filename.rsplit("/", 1)
-		path = Path()
-		full_name = split_filename[0]
-		if len(split_filename) > 1:
-			path = Path(split_filename[0])
-			full_name = split_filename[1]
+	def from_filename(cls, input_filename):
+		# turn the input into a path. If it already is, then this does nothing 
+		input_filename = Path(input_filename)
+		if not input_filename.is_file():
+			raise ValueError("input must be a name or path to a file")
+		full_name = input_filename.name
+		path = input_filename.parent
 
-		full_name_split = filename.split("_", 1)
+		full_name_split = full_name.split("_", 1)
 		cache_date = datetime.datetime.strptime(full_name_split[0], DATE_FORMAT_STRING)
 		real_name = full_name_split[1]
 		return cls(path, real_name, last_saved=cache_date)
