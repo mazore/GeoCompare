@@ -55,8 +55,8 @@ class CacheEntry:
 		else:
 			return self.get_full_path().exists()
 
-	def get_age_at_datetime(self, datetime=datetime.datetime.now()):
-		return datetime - self.last_saved
+	def get_age_at_datetime(self, dt_val=datetime.datetime.now()):
+		return dt_val - self.last_saved  
 
 	def is_older_than(self, datetime):
 		cache = self.get_age_since_datetime(datetime=datetime).total_seconds()
