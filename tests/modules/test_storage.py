@@ -33,11 +33,11 @@ class TestStorageMethods(unittest.TestCase):
 
 
 	def test_age_at_datetime(self):
-		self.assertEqual(datetime.interval(0), self.cache.get_age_at_datetime(datetime.datetime(2021,3,3,11,3,50)))
-		self.assertEqual(datetime.interval(minutes=5), self.cache.get_age_at_datetime(datetime.datetime(2021,3,3,11,3,55)))
-		self.assertEqual(datetime.interval(minutes=-5), self.cache.get_age_at_datetime(datetime.datetime(2021,3,3,11,3,45)))
+		self.assertEqual(datetime.timedelta(0), self.cache.get_age_at_datetime(datetime.datetime(2021,3,3,11,3,50)))
+		self.assertEqual(datetime.timedelta(seconds=5), self.cache.get_age_at_datetime(datetime.datetime(2021,3,3,11,3,55)))
+		self.assertEqual(datetime.timedelta(seconds=-5), self.cache.get_age_at_datetime(datetime.datetime(2021,3,3,11,3,45)))
 
-		
+
 
 if __name__ == '__main__':
 	unittest.main()
