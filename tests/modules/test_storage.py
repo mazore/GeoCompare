@@ -37,6 +37,11 @@ class TestStorageMethods(unittest.TestCase):
 		self.assertEqual(datetime.timedelta(seconds=5), self.cache.get_age_at_datetime(datetime.datetime(2021,3,3,11,3,55)))
 		self.assertEqual(datetime.timedelta(seconds=-5), self.cache.get_age_at_datetime(datetime.datetime(2021,3,3,11,3,45)))
 
+	def test_is_older_than(self):
+		# assert that the cache is not older than a date occurring a few seconds later
+		self.assertFalse(self.cache.is_older_than(datetime.datetime(2021,3,3,11,4,0)))
+		# assert that the cache is older than a date occurring before it
+		self.assertTrue(self.cache.is_older_than(datetime.datetime(2021,3,3,10,0,0)))
 
 
 if __name__ == '__main__':

@@ -58,12 +58,8 @@ class CacheEntry:
 	def get_age_at_datetime(self, dt_val=datetime.datetime.now()):
 		return dt_val - self.last_saved  
 
-	def is_older_than(self, datetime):
-		cache = self.get_age_since_datetime(datetime=datetime).total_seconds()
-		if cache >= 0:
-			return False
-		else:
-			return True
+	def is_older_than(self, dt):
+		return self.get_age_at_datetime(dt) < datetime.timedelta(0)
 
 	def write(self, data, clear_previous=False, raw=False):
 		writetime = datetime.datetime.now()
