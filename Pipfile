@@ -9,6 +9,7 @@ mkdocs = "*"
 requests = "*"
 argparse = "*"
 geohash2 = "*"
+coverage = "*"
 
 [dev-packages]
 
