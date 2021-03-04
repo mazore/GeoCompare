@@ -43,6 +43,23 @@ class TestStorageMethods(unittest.TestCase):
 		# assert that the cache is older than a date occurring before it
 		self.assertTrue(self.cache.is_older_than(datetime.datetime(2021,3,3,10,0,0)))
 
+	def test_write(self):
+		pass
+
+	def test_write_raw(self):
+		pass
+
+	def test_write_clear_previous(self):
+		pass
+
+	def test_read(self):
+		pass
+
+	def test_read_raw(self):
+		pass
+
+	def test_write_raw(self):
+		pass
 
 if __name__ == '__main__':
 	unittest.main()
