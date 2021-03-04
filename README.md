@@ -13,3 +13,10 @@ Documentation is hosted on [Github Pages](https://vacfind.github.io/GeoCompare) 
 ## Tests
 
 to run unit tests, use the command `python3 -m unittest tests/**/*.py`
+
+### Coverage
+
+to run tests with coverage, run `coverage run --source=. -m unittest tests/**/*.py`
+
+to view the coverage report, run `coverage report`, or `coverage html` for an in-browser version
+
