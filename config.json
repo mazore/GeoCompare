@@ -5,8 +5,15 @@
 			"fetcher": "arcgis",
 			"parser": "geojson",
 			"id": "c50a1a352e944a66aed98e61952051ef",
-			"url": "https://services.arcgis.com/8ZpVMShClf8U8dae/arcgis/rest/services/Covid19_Vaccination_Locations/FeatureServer"
-
+			"urls": [
+				{
+					"name": "Layer 0",
+					"parameters": {
+						"serviceItemId": "c50a1a352e944a66aed98e61952051ef",
+						"layer": "0"
+					}
+				}
+			]
 		},
 		{
 			"name": "findyourvaccine-googledrive",
