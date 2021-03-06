@@ -1,10 +1,13 @@
+from map import Map
+
 class Source:
-	def __init__(self, id, name, fetcher_name, url, parameters={}):
+	def __init__(self, id, name, fetcher_name, url, map, parameters={}):
 		self.url = url
 		self.name = name
 		self.fetcher_name = fetcher_name
 		self.id = id
 		self.parameters = parameters
+		self.map = Map(map)
 
 	@classmethod
 	def fromDict(cls, data):
@@ -13,7 +16,7 @@ class Source:
 		except KeyError:
 			params = {}
 
-		return cls(data['id'], data['name'], data['fetcher'], data['url'], parameters=params)
+		return cls(data['id'], data['name'], data['fetcher'], data['url'], data['map'], parameters=params)
 
 	def fetch(self):
 		raise NotImplementedError()
@@ -36,3 +39,5 @@ class Source:
 	def get_id(self):
 		return self.id
 
+	def get_map(self):
+		return self.map
