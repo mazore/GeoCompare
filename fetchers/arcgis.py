@@ -32,7 +32,8 @@ class Arcgis(Fetcher):
 			serviceItemID = url_parts["parameters"]["serviceItemId"]
 			layerID = int(url_parts["parameters"]["layer"])
 			url = self.generate_geojson_url(serviceItemID, layerID=layerID)
-			self.fetch_geojson(url, url_parts["filename"] + ".geojson")
+			filename = self.generate_cachefile_name(url_parts["filename"])
+			self.fetch_geojson(url, filename)
 
 	# use me if a baseurl is provided instead of a serviveitemid and layer
 	def get_info(self, url):
@@ -49,6 +50,9 @@ class Arcgis(Fetcher):
 
 	def fetch_geojson(self, url, filename, force_fetch=False):	
 		fetch_unless_cache(self.cachepath, url, filename, self.build_headers(), force_fetch=force_fetch)
+
+	def generate_cachefile_name(self, name):
+		return name + ".geojson"
 
 	def generate_geojson_url(self, serviceItemID, layerID=0):
 		url = "https://opendata.arcgis.com/datasets/{serviceItemID}_{layerID}.geojson"
