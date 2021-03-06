@@ -8,6 +8,17 @@ class VaccinationLocation:
 		self.long = lon
 		self.source = source
 
+	@classmethod
+	def from_mapped_data(cls, data, datamap, source=None):
+		return cls(
+			datamap.get_standard_key_from_data("name"),
+			datamap.get_standard_key_from_data("id"),
+			datamap.get_standard_key_from_data("address"),
+			datamap.get_standard_key_from_data("lat"),
+			datamap.get_standard_key_from_data("long"),
+			source=source
+		)
+
 	def get_name(self):
 		return self.name
 	
