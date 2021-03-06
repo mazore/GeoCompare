@@ -13,10 +13,22 @@
 			"id": "1124pvazfFxhHkfFldcdrhSoh8DlpPwu0QvUskupEiG0",
 			"fetcher": "googledrive",
 			"parser": "csv",
-			"url":"https://docs.google.com/spreadsheets/d/1124pvazfFxhHkfFldcdrhSoh8DlpPwu0QvUskupEiG0",
-			"parameters": {
-				"sheets": ["CO", "FL"]
-			}
+			"urls":[
+				{ 
+					"name": "CO",
+					"baseurl": "https://docs.google.com/spreadsheets/d/1124pvazfFxhHkfFldcdrhSoh8DlpPwu0QvUskupEiG0",
+					"parameters": {
+						"sheets": "CO"
+					}
+				},
+				{
+					"name": "FL",
+					"baseurl": "https://docs.google.com/spreadsheets/d/1124pvazfFxhHkfFldcdrhSoh8DlpPwu0QvUskupEiG0",
+					"parameters": {
+						"sheets": "FL"
+					}
+				}
+			]
 		}
 	]
 }
