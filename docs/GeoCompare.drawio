@@ -1,1 +1,64 @@
-<mxfile host="Electron" modified="2021-03-02T18:44:23.500Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/13.7.9 Chrome/85.0.4183.121 Electron/10.1.3 Safari/537.36" etag="8E6Pxcxo3L6uVHIlQEgq" version="13.7.9" type="device"><diagram id="LscZ_216-JA5jk5MYZ07" name="Page-1">1VlNc6M4EP01rj2Ni287R8dJZrcqW5NdV00yRxlk0FogSoixnV+/LSEMWCT2TMXGOSRGjSTE637dT2LkztPtV47y5G8WYTpyrGg7cu9GjmPbzgR+pGVXWQLPrwwxJ5Hu1BgW5BVro6WtJYlw0ekoGKOC5F1jyLIMh6JjQ5yzTbfbitHuU3MUY8OwCBE1rc8kEkllnfpWY/8Tkzipn2xb+k6K6s7aUCQoYpuWyb0fuXPOmKiu0u0cUwlejUs17uGNu/uFcZyJUwZ8S/LnH8/r3Wv8/etdTO7j9cvsSz1NIXb1G+MIANBNxkXCYpYhet9YbzkrswjLaS1oNX0eGcvBaIPxPyzETnsTlYKBKREp1XfxloiX1vUPOdXY1627rZ5ZNXZ1IxN899JutEbJZjNMtZpx0UzGATRDioqChJXxgdB6ORUE8r3fhLaGiZU8xO/gWYco4jEW7+G+DwBgDmYphiXDOI4pEuRndx1Ih3C879d4GS60o3/B6Xren4iW+kkPWIQJ5kYsNJ6WOG0SIvAiRwqBDfC961U9K+YCb98H0nxxPcC90WSps4VOFpuGenbNp6RFu8A6E1SOAdUjg+QApjkCxN4BzLoIYL53FLB9Kr0MYJaByQUTijWeTvxfSSrQeMKcwLtD9H+mROOemGjeCJ/LJBrXYM9CvVcxcgIKq75dQsoJYnklElxgWcdRBv+X8nL29Ncf0NNiXK4tk8tmQmWpw8EkA/dlWHxBIUxekCWV4yMkkBmMlIJ0kEEH9TjHylmsjC5D1i5Xa162uOpaPVy1J+ciq+0OStbfqf72NZMyOJWUg5b/wGDlLBSEZcXg5d+bHjBkalLEmfg9FHHORZGbYctZp5idqI/HE79NEvsIRT4w/iefQf1OjPB/QrzAfPjwDzxn7HcJEJgEuKwArotUCy57DG29Y5D1GXa1GWUo2pdca8VZKmNqK8uyUstFXfdh9y6XCX9UC+mwV0gDiqILMKIkzmQex5kSa7cSawJzzPSNlERRxT9ckFe0VFPJCM8ZCAQFjH878u/kXEC5omLfR+1cDoq711Pcgx7HnS1x2eYuz5GO2+d6S6kmFAq1Slgk+CYhhXID47jlTpEAE+KkwqNiiiHfpFdzzFeMS8+j/UMoWStZx1IYS4rKqBSd1nL1Q1KUkbyUCUD1OXwAyuSCcs6isoojpBYKZsQj8GSk8kdRwrDTQ4nilbi2QPKMJOD2CUW/J5b8s23qnGGroNMug/Wto2WwUwWbuncNQtF2TlWK3pClsl5mK4f8qzl2Jecf+2KouXLypup8ByCD7qkuc6IKLfPU5KL88U7lz2RQ/ngGf76VIi/NGnVpqWm7B7y5GVxo+gZWrtQrFWCF0hCZfGclSKrDIln/D8u/7LlE4botNaUqQdVA9aNUTlngVUlNpbFS6mQHISjhYHy9ohDWzrwRM/PF96q9+OdRXQQolS7KlkW+d8+nFSAHR/BuT2R4fUfK7tkiw9yxGRAfYUx91pduY/mZcrxEkKDGEQvLVKLyAfLfOuDT1DyI75P/5zvau6KDi2OK7ZKV41ThdaYjCmg2X3zVvdZ3c/f+fw==</diagram></mxfile>
+<mxfile host="Electron" modified="2021-03-06T04:24:54.852Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/13.7.9 Chrome/85.0.4183.121 Electron/10.1.3 Safari/537.36" etag="jynpL2IuHNSckSPVeUkb" compressed="false" version="13.7.9" type="device">
+  <diagram id="LscZ_216-JA5jk5MYZ07" name="Page-1">
+    <mxGraphModel dx="702" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=classic;endFill=1;" parent="1" source="OhpWYWkyzgVGDgiEgkXA-1" target="OhpWYWkyzgVGDgiEgkXA-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-1" value="Fetcher" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="390" y="65" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-2" value="Local Cache" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="540" y="65" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.875;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=classic;endFill=1;" parent="1" source="OhpWYWkyzgVGDgiEgkXA-3" target="OhpWYWkyzgVGDgiEgkXA-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-3" value="Sources&lt;br&gt;these can be API&#39;s or any other&lt;br&gt;internet-accessible data" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="10" width="300" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=classic;endFill=1;" parent="1" source="OhpWYWkyzgVGDgiEgkXA-6" target="OhpWYWkyzgVGDgiEgkXA-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-6" value="Actions" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="180" width="275" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="OhpWYWkyzgVGDgiEgkXA-7" target="OhpWYWkyzgVGDgiEgkXA-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-7" value="Parsers" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="642.5" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-10" value="1. Fetchers download data from external sources to a local cache" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="40" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-11" value="2. Actions interact with this stored data through parsers&lt;br&gt;to perform actions like comparisons or other data manipulations&lt;br&gt;and produces a standardized result" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+          <mxGeometry x="442.5" y="310" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=classic;endFill=1;" parent="1" source="OhpWYWkyzgVGDgiEgkXA-12" target="OhpWYWkyzgVGDgiEgkXA-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-12" value="Result Cache" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="210" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=classic;endFill=1;" parent="1" source="OhpWYWkyzgVGDgiEgkXA-14" target="OhpWYWkyzgVGDgiEgkXA-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-14" value="Output" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="130" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-15" value="3. Outputs convert these stanardized results back to a format that is useful&lt;br&gt;for your workflow, like CSV, SQL,&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="390" width="410" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-17" value="" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.document" parent="1" vertex="1">
+          <mxGeometry x="300" y="285" width="60" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="OhpWYWkyzgVGDgiEgkXA-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=classic;endFill=1;" parent="1" source="OhpWYWkyzgVGDgiEgkXA-2" target="OhpWYWkyzgVGDgiEgkXA-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
