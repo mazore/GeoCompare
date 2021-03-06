@@ -5,8 +5,8 @@ from parsers.csv import Csv
 from parsers.json import Json
 
 class Source:
-	def __init__(self, id, name, fetcher_name, parser_name, url, map, parameters={}):
-		self.url = url
+	def __init__(self, id, name, fetcher_name, parser_name, urls, map, parameters={}):
+		self.urls = urls
 		self.name = name
 		self.fetcher_name = fetcher_name
 		self.parser_name = parser_name
@@ -43,8 +43,8 @@ class Source:
 	def get_name(self):
 		return self.name
 
-	def get_url(self):
-		return self.url
+	def get_url_objects(self):
+		return self.urls
 	
 	def get_parameter(self, key):
 		try:
