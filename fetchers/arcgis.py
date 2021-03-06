@@ -26,13 +26,15 @@ class Arcgis(Fetcher):
 		pass
 
 	def fetch(self, source):
-		url = source.get_url()
-		data = self.get_info(url)
+		urls = source.get_url_objects()
+		
+		for url_parts in urls:
+			serviceItemID = url_parts["parameters"]["serviceItemId"]
+			layerID = int(url_parts["parameters"]["layer"])
+			url = self.generate_geojson_url(serviceItemID, layerID=layerID)
+			self.fetch_geojson(url, url_parts["filename"] + ".geojson")
 
-
-		for layer in data["layers"]:
-			self.fetch_geojson(data["serviceItemId"], layer["id"])
-
+	# use me if a baseurl is provided instead of a serviveitemid and layer
 	def get_info(self, url):
 		url = url + "?f=pjson"
 		try:
@@ -45,9 +47,7 @@ class Arcgis(Fetcher):
 
 		return data
 
-	def fetch_geojson(self, serviceItemID, layerID, force_fetch=False):	
-		url = self.generate_geojson_url(serviceItemID, layerID=layerID)
-		filename = url.split("/")[-1]
+	def fetch_geojson(self, url, filename, force_fetch=False):	
 		fetch_unless_cache(self.cachepath, url, filename, self.build_headers(), force_fetch=force_fetch)
 
 	def generate_geojson_url(self, serviceItemID, layerID=0):
