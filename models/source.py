@@ -32,11 +32,11 @@ class Source:
 	def get_fetcher(self):
 		pname = self.get_parser_name()
 		if pname == 'csv':
-			return Csv()
+			return Csv(self.map)
 		elif pname == 'geojson':
-			return Geojson()
+			return Geojson(self.map)
 		elif pname == 'json':
-			return Json()
+			return Json(self.map)
 
 		return None
 
