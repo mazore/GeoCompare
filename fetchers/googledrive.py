@@ -37,7 +37,7 @@ class Googledrive(Fetcher):
 		urls = source.get_url_objects()
 
 		for url_parts in urls:
-			baseurl = url_parts["parameters"]["baseurl"]
+			baseurl = url_parts["baseurl"]
 			sheet = url_parts["parameters"]["sheet"]
 			url = self.generate_drive_csv_url(baseurl, sheet=sheet)
 			filename = self.add_extension(url_parts["filename"])

@@ -1,4 +1,4 @@
-from map import Map
+from .map import Map
 
 from parsers.geojson import Geojson
 from parsers.csv import Csv
@@ -18,7 +18,7 @@ class Source:
 	def fromDict(cls, data):
 		params = data.get("parameters", {})
 
-		return cls(data['id'], data['name'], data['fetcher'], data['parser'],data['url'], data['map'], parameters=params)
+		return cls(data['id'], data['name'], data['fetcher'], data['parser'], data['urls'], data['map'], parameters=params)
 
 	def fetch(self):
 		raise NotImplementedError()
@@ -35,7 +35,7 @@ class Source:
 			return Csv()
 		elif pname == 'geojson':
 			return Geojson()
-		elif pname = 'json':
+		elif pname == 'json':
 			return Json()
 
 		return None

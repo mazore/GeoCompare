@@ -30,7 +30,7 @@ class Arcgis(Fetcher):
 		
 		for url_parts in urls:
 			serviceItemID = url_parts["parameters"]["serviceItemId"]
-			layerID = int(url_parts["parameters"]["layer"])
+			layerID = int(url_parts["parameters"]["layerId"])
 			url = self.generate_geojson_url(serviceItemID, layerID=layerID)
 			filename = self.add_extension(url_parts["filename"])
 			self.fetch_geojson(url, filename)

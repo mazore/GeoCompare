@@ -8,34 +8,39 @@
 			"urls": [
 				{
 					"name": "Layer 0",
+					"filename": "c50a1a352e944a66aed98e61952051ef_0",
 					"parameters": {
 						"serviceItemId": "c50a1a352e944a66aed98e61952051ef",
-						"layer": "0"
+						"layerId": "0"
 					}
 				}
-			]
+			],
+			"map": {}
 		},
 		{
 			"name": "findyourvaccine-googledrive",
 			"id": "1124pvazfFxhHkfFldcdrhSoh8DlpPwu0QvUskupEiG0",
 			"fetcher": "googledrive",
 			"parser": "csv",
-			"urls":[
+			"urls": [
 				{ 
 					"name": "CO",
 					"baseurl": "https://docs.google.com/spreadsheets/d/1124pvazfFxhHkfFldcdrhSoh8DlpPwu0QvUskupEiG0",
+					"filename": "findyourvaccine-googledrive-CO",
 					"parameters": {
-						"sheets": "CO"
+						"sheet": "CO"
 					}
 				},
 				{
 					"name": "FL",
 					"baseurl": "https://docs.google.com/spreadsheets/d/1124pvazfFxhHkfFldcdrhSoh8DlpPwu0QvUskupEiG0",
+					"filename": "findyourvaccine-googledrive-FL",
 					"parameters": {
-						"sheets": "FL"
+						"sheet": "FL"
 					}
 				}
-			]
+			],
+			"map": {}
 		}
 	]
 }
