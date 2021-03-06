@@ -11,10 +11,7 @@ class Source:
 
 	@classmethod
 	def fromDict(cls, data):
-		try:
-			params = data["parameters"]
-		except KeyError:
-			params = {}
+		params = data.get("parameters", {})
 
 		return cls(data['id'], data['name'], data['fetcher'], data['url'], data['map'], parameters=params)
 
