@@ -1,6 +1,5 @@
 class Parser:
-	def __init__(self, location, keymap):
-		self.location = location
+	def __init__(self, keymap):
 		self.keymap = keymap
 
 	@classmethod
