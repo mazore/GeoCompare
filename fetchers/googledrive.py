@@ -40,18 +40,14 @@ class Googledrive(Fetcher):
 			baseurl = url_parts["parameters"]["baseurl"]
 			sheet = url_parts["parameters"]["sheet"]
 			url = self.generate_drive_csv_url(baseurl, sheet=sheet)
-			filename = self.generate_cachefile_name(url_parts["filename"], sheet=sheet)
+			filename = self.add_extension(url_parts["filename"])
 			self.fetch_as_csv(url, filename)
 
 	def fetch_as_csv(self, url, filename, force_fetch=None):
 		fetch_unless_cache(self.cachepath, url, filename, self.build_headers(), force_fetch=force_fetch)
 
-	def generate_cachefile_name(self, name, sheet=None):
-		if sheet:
-			name += "-" + sheet
-		
-		name += ".csv"
-		return name
+	def add_extension(self, name):
+		return name + ".csv"
 
 	def generate_drive_csv_url(self, url, sheet=None):
 		finalurl = url + "/gviz/tq?tqx=out:csv"
