@@ -1,3 +1,4 @@
+# this class is intended as a standardized internal representation of a vaccination location so actions have a standard format that they can use
 class VaccinationLocation:
 	def __init__(self, name, id, address, lat, lon, source=None):
 		self.name = name
