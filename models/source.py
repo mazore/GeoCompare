@@ -1,5 +1,9 @@
 from map import Map
 
+from parsers.geojson import Geojson
+from parsers.csv import Csv
+from parsers.json import Json
+
 class Source:
 	def __init__(self, id, name, fetcher_name, parser_name, url, map, parameters={}):
 		self.url = url
@@ -24,6 +28,17 @@ class Source:
 	
 	def get_parser_name(self):
 		return self.parser_name
+
+	def get_fetcher(self):
+		pname = self.get_parser_name()
+		if pname == 'csv':
+			return Csv()
+		elif pname == 'geojson':
+			return Geojson()
+		elif pname = 'json':
+			return Json()
+
+		return None
 
 	def get_name(self):
 		return self.name
