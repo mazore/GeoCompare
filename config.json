@@ -10,7 +10,7 @@
 		},
 		{
 			"name": "findyourvaccine-googledrive",
-			"id": "1124pvazfFxhHkfFldcdrhSoh8DlpPwu0QvUskupEiG",
+			"id": "1124pvazfFxhHkfFldcdrhSoh8DlpPwu0QvUskupEiG0",
 			"fetcher": "googledrive",
 			"parser": "csv",
 			"url":"https://docs.google.com/spreadsheets/d/1124pvazfFxhHkfFldcdrhSoh8DlpPwu0QvUskupEiG0",
