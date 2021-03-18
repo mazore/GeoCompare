@@ -10,5 +10,4 @@ class Parser:
 	def find_nearby_location(self, data, lat, long):
 		raise NotImplementedError()
 
-	def 
 
