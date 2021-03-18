@@ -11,14 +11,20 @@ class TestConfigMethods(unittest.TestCase):
 			{
 				"id": "id",
 				"name": "name",
+				"parser": "parser",
 				"fetcher": "fetcher",
-				"url": "url"
+				"urls": [],
+				"map": {},
+				"parameters": {
+					"test": "true"
+				}
 			}
-		]
+		],
+		"actions": []
 	}"""
 
 	def test_get_sources(self):
-		srcs = [Source("id", "name", "fetcher", "url")]
+		srcs = [Source("id", "name", "fetcher", "parser", [], {}, parameters={"test": "true"})]
 		inited = Config(sources=srcs)
 		self.assertEqual(inited.get_sources(), srcs)
 
