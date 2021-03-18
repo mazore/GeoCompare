@@ -11,9 +11,16 @@ jobs:
       PIPENV_VENV_IN_PROJECT: true
     steps:
       - checkout
-      - python/load-cache
-      - python/install-deps
-      - python/save-cache
+      - restore_cache:
+          key: geocompare-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+      - run:
+          command: pipenv install
+      - save_cache:
+          key: geocompare-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          paths:
+            - ".venv"
+            - "/usr/local/bin"
+            - "/usr/local/lib/python3.6/site-packages"
       - run:
           command: python3 -m unittest tests/**/*.py
           name: Test
