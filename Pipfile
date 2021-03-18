@@ -5,13 +5,13 @@ name = "pypi"
 
 [packages]
 geojson = "*"
-mkdocs = "*"
 requests = "*"
 argparse = "*"
 geohash2 = "*"
-coverage = "*"
 
 [dev-packages]
+coverage = "*"
+mkdocs = "*"
 
 [requires]
 python_version = "3.8"
