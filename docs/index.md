@@ -1,11 +1,17 @@
-# GeoCompare Structure
+# GeoCompare Overview
 
 GeoCompare is intended to be modular in order to a accomodate multiple different formats (both for input and output) of geographic data
+
+## GeoCompare Design
+
+In order to allow GeoCompare to become potentially useful to other projects, the goal is to build it in a fairly modular way such so that its easy to support a new format by adding a new parser and output for the new format. 
 
 ![Diagram of GeoCompare Architecture](img/GeoCompare-architecture.png)
 
 ## Fetchers
 Fetchers save data from sources like API's to a local cache for processing
+
+the fetcher for the most part is just a straight up generic file downloader that pretty much just downloads files to the cache directory. fetchers are mainly to like poke all the right settings in terms of like headers and auth to get the data  downloaded. the parser part is what is meant to actually interperet the files
 
 ## Parsers
 Parsers are written to provide a somewhat standard set of methods for accessing data from a particular type of file stored in the cache. This abstracts away the need to handle parsing different formats like GeoJSON in other parts of the program
