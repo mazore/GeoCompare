@@ -9,7 +9,9 @@ This is useful for things like combining state-level vaccination site data into 
 
 ## Documentation
 
-Documentation is hosted on [Github Pages](https://vacfind.github.io/GeoCompare) and built using [MkDocs](https://www.mkdocs.org/)
+End user Documentation is hosted on [Github Pages](https://vacfind.github.io/GeoCompare) and built using [MkDocs](https://www.mkdocs.org/).
+
+Developer documentation can be found on the [wiki](https://github.com/VacFind/GeoCompare/wiki).
 
 
 ## Tests
