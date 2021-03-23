@@ -18,7 +18,7 @@
 			"map": {}
 		},
 		{
-			"name":"giscorps-vaccination-sites",
+			"name":"al-arcgis-vaccination-sites",
 			"fetcher":"arcgis",
 			"parser":"geojson",
 			"id":"9f83c4374188499084ac284ccf5af5c7",
@@ -35,7 +35,7 @@
 			"map":{}
 		},
 		{
-			"name":"giscorps-vaccination-sites",
+			"name":"ak-arcgis-vaccination-sites",
 			"fetcher":"arcgis",
 			"parser":"geojson",
 			"id":"d92cbd6ff2524d7e92bef109f30cb366",
@@ -52,7 +52,7 @@
 			"map":{}
 		},
 		{
-			"name":"giscorps-vaccination-sites",
+			"name":"az-arcgis-vaccination-sites",
 			"fetcher":"arcgis",
 			"parser":"geojson",
 			"id":"67c1462ad1f2480c8f63e9097cbc385d",
@@ -69,7 +69,7 @@
 			"map":{}
 		},
 		{
-			"name":"giscorps-vaccination-sites",
+			"name":"in-arcgis-vaccination-sites",
 			"fetcher":"arcgis",
 			"parser":"geojson",
 			"id":"46630b2520ce44a68a9f42f8343d3518",
@@ -86,7 +86,7 @@
 			"map":{}
 		},
 		{
-			"name":"giscorps-vaccination-sites",
+			"name":"md-arcgis-vaccination-sites",
 			"fetcher":"arcgis",
 			"parser":"geojson",
 			"id":"d677f143334648a1a40b84d94df8e134",
@@ -103,7 +103,7 @@
 			"map":{}
 		},
 		{
-			"name":"giscorps-vaccination-sites",
+			"name":"mt-arcgis-vaccination-sites",
 			"fetcher":"arcgis",
 			"parser":"geojson",
 			"id":"cba5b18cfc82436fbd645327c2699ddf",
@@ -120,7 +120,7 @@
 			"map":{}
 		},
 		{
-			"name":"giscorps-vaccination-sites",
+			"name":"pa-arcgis-vaccination-sites",
 			"fetcher":"arcgis",
 			"parser":"geojson",
 			"id":"42a31a6bbd4042bd8739ff32a7b3e6b5",
@@ -137,7 +137,7 @@
 			"map":{}
 		},
 		{
-			"name":"giscorps-vaccination-sites",
+			"name":"sc-arcgis-vaccination-sites",
 			"fetcher":"arcgis",
 			"parser":"geojson",
 			"id":"bbd8924909264baaa1a5a1564b393063",
@@ -154,7 +154,7 @@
 			"map":{}
 		},
 		{
-			"name":"giscorps-vaccination-sites",
+			"name":"tn-arcgis-vaccination-sites",
 			"fetcher":"arcgis",
 			"parser":"geojson",
 			"id":"f491eed4a4d546c88610ac44ed65d698",
@@ -171,7 +171,7 @@
 			"map":{}
 		},
 		{
-			"name":"giscorps-vaccination-sites",
+			"name":"tx-arcgis-vaccination-sites",
 			"fetcher":"arcgis",
 			"parser":"geojson",
 			"id":"3078b524189848569f62985d71f4584b",
@@ -188,7 +188,7 @@
 			"map":{}
 		},
 		{
-			"name":"giscorps-vaccination-sites",
+			"name":"mn-arcgis-vaccination-sites",
 			"fetcher":"arcgis",
 			"parser":"geojson",
 			"id":"18279cf4ab4740ae92708db437250056",
@@ -198,6 +198,23 @@
 					"filename":"18279cf4ab4740ae92708db437250056_0",
 					"parameters":{
 						"serviceItemId":"18279cf4ab4740ae92708db437250056",
+						"layerId":"0"
+					}
+				}
+			],
+			"map":{}
+		},
+		{
+			"name":"mo-arcgis-vaccination-sites",
+			"fetcher":"arcgis",
+			"parser":"geojson",
+			"id":"97135bbb1bec488e9717aca061c03e41",
+			"urls":[
+				{
+					"name":"Layer 0",
+					"filename":"97135bbb1bec488e9717aca061c03e41",
+					"parameters":{
+						"serviceItemId":"97135bbb1bec488e9717aca061c03e41",
 						"layerId":"0"
 					}
 				}
